@@ -1,0 +1,140 @@
+:root{
+    --bg-main: hsl(233, 47%, 7%);
+    --bg-card: hsl(244, 38%, 16%);
+    --color_insight:hsl(277, 64%, 61%);
+    --White_main_heading_stats: hsl(0, 0%, 100%);
+    --white_main_paragraph: hsla(0, 0%, 100%, 0.75);
+    --white_stat_headings: hsla(0, 0%, 100%, 0.6);
+    --bodyFs:15px;
+}
+
+*,::after,::before{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Inter',  sans-serif ;
+    font-size: var(--bodyFs);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-main);
+    flex-flow: column nowrap;
+}
+.container{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--bg-card);
+    height: 60%;
+    width:80%;
+    max-width: 1100px;
+    max-height: 500px;
+    border-radius: 0.5rem;
+    
+}
+.container .left{
+    width: 50%;
+    padding: 0 1rem;
+    margin:5rem auto;  
+
+}
+.container .left h1{
+    margin-bottom: 3rem;
+    color: var(--White_main_heading_stats);
+    font-size: 3rem;
+    
+}
+.container .left .Insights{
+    color: var(--color_insight);
+    font-size:inherit;
+   
+}
+.container .left p{
+    color: var(--white_main_paragraph);
+    margin-bottom:2rem;
+}
+.Rate_Container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 5rem;
+    gap:1rem;
+    cursor: pointer;
+    transition: .3ms ease-in;
+}
+.Rate_Container .rate .stats{
+color: var(--White_main_heading_stats);
+font-size: 1.5rem;
+font-weight: bold;
+}
+.Rate_Container .rate .info{
+    color: var(--white_stat_headings);
+    font-family: Lexend Deca;
+    font-size: 12px; 
+}
+.right{
+    width: 50%;
+    height: 100%;
+}
+
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: hue-rotate(90deg);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: #fff ; text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; }
+
+
+@media screen and (max-width:900px) and (min-width:200px) {
+    .container{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+        height: 100vh;
+        width: 80vw;
+        text-align: center;
+        overflow-y: scroll;
+    }
+    .container .left>h1{
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+   .container .left p{
+    font-size: .75rem;
+    margin-bottom:1rem ;
+    }
+    .container .left{
+    width: 80%;
+    order: 1;
+    padding: 0 1rem;
+    margin:1rem auto;
+    }
+    .container .right{
+    order: 0;
+    height:200px;
+    width: 100%;
+    }
+    img{
+    height: 100%;
+    width: 100%;
+    object-fit: center top ;
+    }
+    .Rate_Container .rate .stats{
+    font-size: 1rem;
+    font-weight: bold;
+    }
+    .Rate_Container .rate .info{
+     
+        font-size: .5rem;
+        }
+    .Rate_Container {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1.5rem ;
+}
+}
