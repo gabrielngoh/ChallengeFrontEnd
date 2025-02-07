@@ -1,0 +1,90 @@
+:root{
+    --violet:hsl(257, 40%, 49%);
+    --soft_magenta: hsl(300, 69%, 71%);
+
+}
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:"Open Sans", sans-serif;
+   background:url(../images/bg-mobile.svg) no-repeat var(--violet);
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    color:white ;
+    overflow-y: scroll;
+}
+h1{
+    margin-bottom: 2rem ;
+    line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.5rem, 1.245rem + 1.255vw, 2.5rem);
+}
+.Container{
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 2rem auto;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 90%;
+    overflow-y: scroll;
+}
+#logo_huddle img{
+ max-width: 15rem;
+
+ height: 2.5rem;
+  margin:1rem 0 1rem 1rem ;
+}
+.Container p{
+line-height: 1.5em;
+width: 97%;
+margin-bottom: 3rem;
+font-size: clamp(1rem, 0.873rem + 0.627vw, 1.5rem);
+
+}
+.container .description {
+    height: 30%;
+}
+.description button {
+    width:clamp(12.5rem, 12.5rem + 0vw, 12.5rem);
+    height:clamp(2.5rem, 2.209rem + 1.435vw, 3.5rem);
+    background-color: #fff;
+    border-radius: 1.25rem;
+    text-align: center;
+    color: var(--violet);
+    outline: none;
+    border: none;
+    box-shadow: #00000080  1px 2px 4px ;
+    transition: .3s ease-in-out;
+}
+.description button:hover{
+    background-color: var(--soft_magenta);
+    color: white;
+    box-shadow: #00000080  1px 2px 5px 2px;
+    cursor: pointer;
+}
+ .icones i:hover{
+    border: 2px solid #FF52C1;
+    cursor: pointer;
+    background: #FF52C1;
+    transform: translateY(-1rem);
+}
+.icones{
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+.icones i{
+    margin:5rem .5rem;
+    width: clamp(1rem, 1.491rem + 1.121vw, 2.5rem);
+    border: 2px solid white;
+    height: clamp(1rem, 1.531rem + 1.076vw, 2.5rem);
+    border-radius: 50%;
+    background-color: var(--violet);
+    padding: 15px;
+    transition: .3s ease-in-out;
+}
